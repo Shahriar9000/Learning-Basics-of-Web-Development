@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+
+<!-- Reference: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
+	<head>
+		<!-- Required meta tags -->
+		<title>Users</title>
+		<meta charset = "utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "stylesheet" type = "text/CSS" href = "style.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" 
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+		crossorigin="anonymous">
+
+	</head>
+
+	<body>
+		<header>
+			<h1 class="heading-1" style="color:orange">Account Info </h1></header>
+		<script src="sort.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+
+		<div class = "container">
+			 
+			<form id = "User_Info">
+				Name:<br>
+				<input type = "textbox" name = "Name"><br>
+				Email:<br>
+				<input type = "email" name = "Email"><br>
+				Age:<br>
+				<input type = "date" name = "Birthday"><br>
+				<button type = "button" onclick="Add_User();return false;"> Submit </button>
+			</form>
+
+			<div class = "Sort_Button_container">
+				<div class = "Sort_buttons">
+					<h2>Sort By:</h2>
+					<button type = "button" onclick = "SortByName();">
+					NAME</button>
+					<button type = "button" onclick = "SortByAge();">
+					AGE</button>
+
+					<button type = "button" onclick = "SortByEmail();">
+					EMAIL</button>
+				</div>
+
+				<div class = "average_age" id="avg"> 
+					Average Age: 
+				</div>
+				<!-- <div class = "userAvgAge"> Average Age:	</div> -->
+			</div>			
+		</div>
+
+		<div class = "Table_container">
+			
+			<h2>Listed users</h2>
+			<table id = "Table">
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Email</th>
+						<th scope="col">Birthday</th>
+						<th scope="col">Age</th>
+					</tr>
+				
+			</table>
+		</div>
+	
+	</body>
+
+</html>
